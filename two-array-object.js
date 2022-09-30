@@ -7,19 +7,21 @@
 //ignore extra values
 
 /**Accepts two arrays, "keys" and "values", combines them into a single object the
- * with the number of keys = the length of "keys"
+ * with the number of keys = the length of "keys". Returns a single object.
+ * 
+ * twoArrayObject(['x', 'y', 'z'], [1, 2]); => {'x': 1, 'y': 2, 'z': null}
  */
 
 function twoArrayObject(keys, values) {
     //counter that ends at the length of keys
     //if values index === undefined, value will be null
-    let keyValuePairs = {};
+    let outputObj = {};
     for (let i = 0; i < keys.length; i++) {
         let tempValue = values[i];
         if (tempValue === undefined) {
             tempValue = null;
         }
-        keyValuePairs[keys[i]] = tempValue;
+        outputObj[keys[i]] = tempValue;
     }
-    return keyValuePairs;
+    return outputObj;
 }

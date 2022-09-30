@@ -20,22 +20,21 @@ function averagePair(numbers, targetAvg) {
     return false;
   }
 
-  let leftIndex = 0;
-  let rightIndex = numbers.length - 1;
+  let left = 0;
+  let right = numbers.length - 1;
 
-  debugger
+  //debugger
 
-  while (numbers[leftIndex] <= targetAvg && numbers[rightIndex] >= targetAvg
-    && leftIndex !== rightIndex) {
-    let tempAverage = (numbers[leftIndex] + numbers[rightIndex]) / 2;
-    if (tempAverage === targetAvg) {
+  while (numbers[left] <= targetAvg && numbers[right] >= targetAvg && left !== right) {
+    let tempAvg = (numbers[left] + numbers[right]) / 2;
+    if (tempAvg === targetAvg) {
       return true;
     }
-    else if (tempAverage > targetAvg) {
-      rightIndex--;
+    else if (tempAvg > targetAvg) {
+      right--;
     }
-    else if (tempAverage < targetAvg) {
-      leftIndex++;
+    else if (tempAvg < targetAvg) {
+      left++;
     }
   }
 

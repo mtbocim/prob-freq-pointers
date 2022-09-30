@@ -1,4 +1,4 @@
-"use script";
+"use strict";
 // add whatever parameters you deem necessary & write doc comment
 
 // canConstructWord('aa', 'abc');
