@@ -28,7 +28,7 @@ function canConstructWord(word, letters) {
     const letterCount = letterFreqCount(letters);
 
     //compare 1st counter to 2nd
-    for (key in wordLetterCount) {
+    for (let key in wordLetterCount) {
         if (letterCount[key] === undefined) {
             return false;
         }
